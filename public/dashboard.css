@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+    color: #263247;
+}
+
+/* Menú lateral */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #1e293b;
+    color: white;
+    padding: 25px 15px;
+}
+
+.sidebar h2 {
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.sidebar nav a {
+    display: block;
+    color: #dbe4f0;
+    text-decoration: none;
+    padding: 13px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #334155;
+    color: white;
+}
+
+/* Contenido principal */
+.contenido {
+    margin-left: 240px;
+    padding: 30px;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #64748b;
+}
+
+/* Tarjetas */
+.tarjeta {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0000000d;
+}
+
+.tarjeta h2 {
+    margin-top: 0;
+}
+
+/* Botones de la LED */
+.controles {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button.apagar {
+    background: #dc2626;
+}
+
+button.apagar:hover {
+    background: #b91c1c;
+}
+
+#mensaje {
+    margin-top: 20px;
+    color: #64748b;
+}
+
+button.rotar {
+    background: #dc2626;
+}
+
+#mensaje2 {
+    margin-top: 20px;
+    color: #64748b;
+}

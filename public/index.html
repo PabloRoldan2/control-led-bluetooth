@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Garra Robótica</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h2>Brazo Robótico</h2>
+
+        <nav>
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="informacion.html">Información de la garra</a>
+            <a href="auditoria.html">Auditoría</a>
+        </nav>
+    </aside>
+
+    <main class="contenido">
+        <header>
+            <h1>Dashboard</h1>
+            <p>Panel principal del sistema de control.</p>
+        </header>
+
+        <section class="tarjeta">
+            <h2>Información general</h2>
+            <p>Aquí se mostrará la información general del sistema robótico.</p>
+        </section>
+
+        <section class="tarjeta">
+            <h2>Control de LED</h2>
+            <p>Utiliza los siguientes botones para controlar la LED mediante Bluetooth.</p>
+
+            <div class="controles">
+                <button onclick="controlarLed('ON')">Encender LED</button>
+                <button class="apagar" onclick="controlarLed('OFF')">Apagar LED</button>
+            </div>
+
+            <p id="mensaje">Esperando una acción...</p>
+        </section>
+
+        <section class="tarjeta">
+            <h2>Control de Brazo</h2>
+            <p>Utiliza los siguientes botones para controlar los movimientos del brazo robótico mediante Bluetooth.</p>
+
+            <div class="controles">
+                <button onclick="controlarBrazo('ON')">Izquierda</button>
+                <button class="rotar" onclick="controlarBrazo('OFF')">Derecha</button>
+                <!--ELIMINAR puse de una vez el nombre de la función, pero si quieres se la quitas luego-->
+            </div>
+
+            <p id="mensaje2">Esperando una acción...</p>
+        </section>
+
+    </main>
+
+    <script src="control_led.js"></script>
+    <script src="control_brazo.js"></script>
+
+</body>
+</html>
