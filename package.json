@@ -11,7 +11,9 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "dotenv": "^18.0.7",
     "express": "^5.3.0",
+    "mssql": "^12.7.6",
     "serialport": "^13.0.0"
   }
 }

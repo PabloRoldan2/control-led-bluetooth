@@ -10,6 +10,13 @@ const router = express.Router();
 // "async" nos permite usar "await" para esperar a que el envío termine.
 router.post('/', async (req, res) => {
     // La página manda { estado: 'ON' } o { estado: 'OFF' }
+const { enviar } = require('../bluetooth');
+const { registrarAccion } = require('../db');
+
+const router = express.Router();
+
+// POST /api/brazo  ->  '2' = izquierda, '3' = derecha
+router.post('/', async (req, res) => {
     const { estado } = req.body;
 
     // Validamos: solo aceptamos ON u OFF para no mandar cualquier cosa al puerto.
@@ -37,6 +44,10 @@ router.post('/', async (req, res) => {
         console.error('Error:', err.message);
         res.status(500).json({ mensaje: err.message });
     }
+    // 3 = Brazo a la izquierda, 4 = Brazo a la derecha
+    await registrarAccion(estado === 'ON' ? 3 : 4);
+
+    enviar(estado === 'ON' ? '2' : '3', `Brazo ${estado}`, res);
 });
 
 module.exports = router;
