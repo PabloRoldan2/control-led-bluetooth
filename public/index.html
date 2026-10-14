@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Garra Robótica</title>
     <link rel="stylesheet" href="dashboard.css">
 </head>
+
 <body>
 
     <aside class="sidebar">
@@ -27,6 +29,11 @@
         <section class="tarjeta">
             <h2>Información general</h2>
             <p>Aquí se mostrará la información general del sistema robótico.</p>
+            <h3>Movimientos por dirección</h3>
+            <canvas id="graficaAcciones"></canvas>
+
+            <h3>Movimientos por minuto</h3>
+            <canvas id="graficaTiempo"></canvas>
         </section>
 
         <section class="tarjeta">
@@ -56,8 +63,12 @@
 
     </main>
 
+    <!-- Esto es  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>                
+    <script src="grafica.js"></script>
     <script src="control_led.js"></script>
     <script src="control_brazo.js"></script>
 
 </body>
+
 </html>

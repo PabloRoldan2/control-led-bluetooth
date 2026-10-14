@@ -115,3 +115,8 @@ button.rotar {
     margin-top: 20px;
     color: #64748b;
 }
+
+.tarjeta canvas {
+    max-width: 600px;
+    max-height: 300px;
+}
